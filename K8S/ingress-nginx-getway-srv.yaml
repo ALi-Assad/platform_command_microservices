@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ali.com
+      http:
+        paths:
+          - path: /api/Platform
+            pathType: Prefix
+            backend:
+              service:
+                name: platformservice-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/c/Platform
+            pathType: Prefix
+            backend:
+              service:
+                name: commandsservice-clusterip-srv
+                port:
+                  number: 80

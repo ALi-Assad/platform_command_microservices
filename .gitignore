@@ -1,0 +1,49 @@
+# Build artifacts
+bin/
+obj/
+dist/
+build/
+.vs
+
+# Dependency folders
+node_modules/
+vendor/
+
+# IDE and editor configurations
+.vscode/
+.idea/
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Secrets and configuration files
+.env
+config.json
+
+# Compiled code
+*.class
+*.pyc
+*.o
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Package archives
+*.jar
+*.war
+*.zip
+*.tar.gz
